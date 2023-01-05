@@ -1,0 +1,49 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "user": "Slava",
+      "password": "slava1"
+    },
+    {
+      "id": 2,
+      "user": "Lera",
+      "password": "lera1"
+    },
+    {
+      "id": 3,
+      "user": "admin",
+      "password": "admin"
+    },
+    {
+      "user": "fwerf",
+      "password": "wefe",
+      "id": 4
+    },
+    {
+      "user": "blah",
+      "password": "blahblah",
+      "id": 5
+    },
+    {
+      "user": "aeac",
+      "password": "acac",
+      "id": 6
+    },
+    {
+      "user": "newbie",
+      "password": "newbie",
+      "id": 7
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

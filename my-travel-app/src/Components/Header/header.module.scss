@@ -1,0 +1,141 @@
+.header__wrapper {
+  color: white;
+  background-image: url(../../../public/assets/background/header-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 0 0 55px 55px;
+  min-width: 1920px;
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .header__top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 39px;
+    margin-bottom: 176.5px;
+    width: 1378px;
+
+    .header__logo {
+      display: flex;
+      img.logo_name {
+        height: 19.42px;
+        width: 67.57px;
+        margin-right: 5px;
+      }
+
+      img {
+        width: 13.47px;
+        height: 13.46px;
+      }
+    }
+    .header__nav {
+      color: white;
+      a {
+        text-decoration: none;
+        color: white;
+        margin-right: 54px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 21px;
+      }
+    }
+    .login {
+      cursor: pointer;
+    }
+  }
+  h1 {
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 62px;
+    margin-bottom: 32px;
+  }
+  .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 273px;
+    height: 72px;
+    background: #7b61ff;
+    border-radius: 12px;
+    margin-bottom: 184px;
+    cursor: pointer;
+    img {
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+    }
+    span {
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+  .form {
+    width: 1140px;
+    height: 68px;
+    background-color: white;
+    border-radius: 12px;
+    padding: 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .form__location,
+    .form__activity,
+    .form__date,
+    .form__guests {
+      display: flex;
+      flex-direction: row;
+      color: #5b5b5b;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 16px;
+      align-items: center;
+      img {
+        margin: 26px 19px 24px;
+      }
+    }
+
+    .form__location__card,
+    .form__activity__card,
+    .form__date__card,
+    .form__guests__card {
+      display: flex;
+      flex-direction: column;
+    }
+    select {
+      outline: none;
+      border-color: aliceblue;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+    }
+    option {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      text-decoration: none;
+      border: none;
+      color: #161414;
+    }
+    .form__button {
+      color: black;
+      background: #7b61ff;
+      border-radius: 12px;
+      width: 60px;
+      height: 60px;
+      cursor: pointer;
+      img {
+        position: relative;
+        left: 35%;
+        top: 35%;
+      }
+    }
+  }
+}

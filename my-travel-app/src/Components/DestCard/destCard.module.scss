@@ -1,0 +1,20 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  p {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  img {
+    width: 203px;
+    height: 181px;
+  }
+  margin-right: 31px;
+}
+
+.dest__card {
+  display: flex;
+  flex-direction: column;
+}

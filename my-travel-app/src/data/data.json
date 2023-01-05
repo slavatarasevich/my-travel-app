@@ -1,0 +1,56 @@
+[
+  [
+    {
+      "title": "Big Sur",
+
+      "img": "./assets/icons/dest-big-sur.png"
+    },
+    {
+      "title": "Prescott",
+
+      "img": "./assets/icons/dest-prescott.png"
+    },
+    {
+      "title": "Fort Mayers",
+
+      "img": "./assets/icons/dest-fort-mayers.png"
+    },
+    {
+      "title": "Tucson",
+
+      "img": "./assets/icons/dest-tucson.png"
+    },
+    {
+      "title": "St. Joseph",
+
+      "img": "./assets/icons/dest-st-joseph.png"
+    },
+    {
+      "title": "Madrid",
+
+      "img": "./assets/icons/dest-madrid.png"
+    }
+  ],
+  [
+    {
+      "title": "Monastero Santa Rosa Hotel & Spa",
+
+      "img": "./assets/icons/hotels-rest-monastero.png"
+    },
+    {
+      "title": "Grand Hotel Tremezzo",
+
+      "img": "./assets/icons/hotels-rest-tremezzo.png"
+    },
+    {
+      "title": "The Oberoi Udaivilas, Udaipur",
+
+      "img": "./assets/icons/hotels-rest-udaipur.png"
+    },
+    {
+      "title": "AKA Beverly Hills",
+
+      "img": "./assets/icons/hotels-rest-beverly-hills.png"
+    }
+  ]
+]

@@ -1,0 +1,47 @@
+.auth__page {
+  margin-top: 10%;
+  background: #9b9a9a;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  color: white;
+  width: 700px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h1 {
+    padding-top: 100px;
+  }
+  input {
+    outline: none;
+    width: 30%;
+    margin-bottom: 10px;
+    height: 30px;
+  }
+
+  .log-reg__buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 31%;
+    // margin-bottom: 15px;
+    button {
+      width: 49%;
+    }
+  }
+
+  button {
+    background-color: #f6f4ff;
+    // border-radius: 12px;
+    width: 31%;
+    height: 35px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 0.5px solid#5243c2;
+    margin-bottom: 5px;
+    color: #5243c2;
+    font-weight: 600;
+  }
+}
