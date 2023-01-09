@@ -8,16 +8,16 @@ import "react-datepicker/dist/react-datepicker.css";
 function Header() {
   let navigate = useNavigate();
 
-  function Example() {
-    const [startDate, setStartDate] = useState(new Date());
+  // function Example() {
+  //   const [startDate, setStartDate] = useState(new Date());
 
-    return (
-      <DatePicker
-        selected={startDate}
-        onChange={(date: Date) => setStartDate(date)}
-      />
-    );
-  }
+  //   return (
+  //     <DatePicker
+  //       selected={startDate}
+  //       onChange={(date: Date) => setStartDate(date)}
+  //     />
+  //   );
+  // }
 
   return (
     <div styleName="header__wrapper">
