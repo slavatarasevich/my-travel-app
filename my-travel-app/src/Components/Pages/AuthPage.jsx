@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import styles from "./authPage.module.scss";
 import CSSModules from "react-css-modules";
 import GetServices from "../../Services/GetServices";
-
+import UserPage from "./UserPage";
 
 function AuthPage() {
   let navigate = useNavigate();
@@ -35,18 +35,44 @@ function AuthPage() {
     });
     console.log(filteredArr);
     if (filteredArr.length > 0) {
-      navigate("/user");
+      navigate("/user", { state: name });
     }
   }
 
   return (
     <div styleName="auth__page">
       <h1>Please Authorize</h1>
-      <input onChange={handleInputName} type="text" placeholder="name" />
-      <input onChange={handleInputPass} type="text" placeholder="password" />
+
+      <div styleName="form__div">
+        <input
+          onChange={handleInputName}
+          type="text"
+          styleName="form-input"
+          placeholder="."
+        />
+        <label htmlFor="" styleName="form-label">
+          Username
+        </label>
+      </div>
+
+      <div styleName="form__div">
+        <input
+          onChange={handleInputPass}
+          type="password"
+          styleName="form-input"
+          placeholder="."
+        />
+        <label htmlFor="" styleName="form-label">
+          Password
+        </label>
+      </div>
+
       <div styleName="log-reg__buttons">
-        <button onClick={handleLogin}>Log in</button>
+        <button styleName="auth-form__buttons" onClick={handleLogin}>
+          Log in
+        </button>
         <button
+          styleName="auth-form__buttons"
           onClick={() => {
             navigate("/reg");
           }}
@@ -55,6 +81,7 @@ function AuthPage() {
         </button>
       </div>
       <button
+        styleName="auth-form__buttons__back"
         onClick={() => {
           navigate("/");
         }}

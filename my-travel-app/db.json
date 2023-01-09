@@ -34,6 +34,21 @@
       "user": "newbie",
       "password": "newbie",
       "id": 7
+    },
+    {
+      "user": "",
+      "password": "",
+      "id": 8
+    },
+    {
+      "user": "newuser",
+      "password": "newuser",
+      "id": 9
+    },
+    {
+      "user": "NIkita",
+      "password": "rgrwgwer",
+      "id": 10
     }
   ],
   "comments": [

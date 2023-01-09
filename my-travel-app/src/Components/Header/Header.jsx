@@ -1,9 +1,24 @@
 import CSSModules from "react-css-modules";
 import styles from "./header.module.scss";
 import { useNavigate } from "react-router-dom";
+import React, { useState } from "react";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 function Header() {
   let navigate = useNavigate();
+
+  function Example() {
+    const [startDate, setStartDate] = useState(new Date());
+
+    return (
+      <DatePicker
+        selected={startDate}
+        onChange={(date: Date) => setStartDate(date)}
+      />
+    );
+  }
+
   return (
     <div styleName="header__wrapper">
       <div styleName="header__top">
@@ -66,7 +81,12 @@ function Header() {
           <img src="./assets/icons/form-date.png" alt="" />
           <div styleName="form__date__card">
             <span>When</span>
-            <select name="Date" id="" placeholder="Choose a Date">
+            <select
+              onSelect={Example}
+              name="Date"
+              id=""
+              placeholder="Choose a Date"
+            >
               <option>Choose a Date</option>
             </select>
           </div>
@@ -80,7 +100,7 @@ function Header() {
             </select>
           </div>
         </div>
-        <div styleName="form__button">
+        <div onClick={Example} styleName="form__button">
           <img src="./assets/icons/form-search.png" alt="" />
         </div>
       </div>

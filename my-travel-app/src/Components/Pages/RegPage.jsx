@@ -31,23 +31,38 @@ function RegPage() {
 
   return (
     <div styleName="reg-page__container">
-      <h1>You can register here </h1>
+      <h1>Register now </h1>
       {regFlag ? (
         <h2>You've been registered</h2>
       ) : (
         <>
-          <input
-            onChange={handleInputName}
-            type="text"
-            placeholder="enter your username"
-          />
-          <input
-            onChange={handleInputPass}
-            type="text"
-            placeholder="enter your password"
-          />
-          <button onClick={handleRegister}>Register</button>
+          <div styleName="form__div">
+            <input
+              styleName="form-input"
+              onChange={handleInputName}
+              type="text"
+              placeholder="."
+            />
+            <label htmlFor="" styleName="form-label">
+              Username
+            </label>
+          </div>
+          <div styleName="form__div">
+            <input
+              styleName="form-input"
+              onChange={handleInputPass}
+              type="password"
+              placeholder="."
+            />
+            <label htmlFor="" styleName="form-label">
+              Password
+            </label>
+          </div>
+          <button styleName="reg-form__button" onClick={handleRegister}>
+            Register
+          </button>
           <button
+            styleName="reg-form__button__back"
             onClick={() => {
               navigate("/");
             }}
