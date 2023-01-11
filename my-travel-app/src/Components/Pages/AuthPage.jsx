@@ -8,6 +8,7 @@ import UserPage from "./UserPage";
 function AuthPage() {
   let navigate = useNavigate();
   const [authUsers, setAuthUsers] = useState([]);
+  const [error, setError] = useState();
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
 
@@ -30,6 +31,13 @@ function AuthPage() {
   };
 
   function handleLogin() {
+    if (name === "" && password === "") {
+      setError(true);
+      setTimeout(() => {
+        setError(false);
+      }, 1000);
+      return;
+    }
     const filteredArr = authUsers.filter((authUser) => {
       return authUser.user === name && authUser.password === password;
     });
@@ -41,7 +49,7 @@ function AuthPage() {
 
   return (
     <div styleName="auth__page">
-      <h1>Please Authorize</h1>
+      {error ? <h1>Enter your creds</h1> : <h1>Please Authorize</h1>}
 
       <div styleName="form__div">
         <input

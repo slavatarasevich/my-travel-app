@@ -11,10 +11,14 @@ function UserPage() {
   console.log(state);
   return (
     <div styleName="user-page__container">
-      <h1>
-        hello <span>{state}</span>{" "}
-      </h1>
-      <Header />
+      <Header state={state} />
+      <div styleName="trips__user_page">
+        <ul>
+          <li>1.</li>
+          <li>2..</li>
+          <li>3...</li>
+        </ul>
+      </div>
     </div>
   );
 }

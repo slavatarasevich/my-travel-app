@@ -1,10 +1,35 @@
 .user-page__container {
   color: #7b61ff;
+  display: flex;
+  flex-direction: column;
+  // justify-content: center;
+  align-items: center;
   h1 {
     padding-left: 15px;
     font-size: 40px;
     span {
-      color: black;
+      color: #161414;
+    }
+  }
+  .trips__user_page {
+    width: 1378px;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(221, 217, 217, 0.5);
+    color: #fff;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border: 1px solid #858585;
+    p {
+      font-size: 22px;
+      font-weight: 400;
+      padding-left: 20px;
+      color: #161414;
+    }
+    ul {
+      list-style: none;
+      color: #161414;
     }
   }
 }

@@ -29,6 +29,7 @@
       img {
         width: 13.47px;
         height: 13.46px;
+        cursor: pointer;
       }
     }
     .header__nav {
@@ -44,6 +45,11 @@
     }
     .login {
       cursor: pointer;
+    }
+    .greet__header {
+      span {
+        color: #7b61ff;
+      }
     }
   }
   h1 {
