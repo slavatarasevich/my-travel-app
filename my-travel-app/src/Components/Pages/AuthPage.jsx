@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import styles from "./authPage.module.scss";
 import CSSModules from "react-css-modules";
 import GetServices from "../../Services/GetServices";
-import UserPage from "./UserPage";
 
 function AuthPage() {
   let navigate = useNavigate();

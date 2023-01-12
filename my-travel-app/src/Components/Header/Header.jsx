@@ -2,26 +2,34 @@ import CSSModules from "react-css-modules";
 import styles from "./header.module.scss";
 import { useNavigate } from "react-router-dom";
 import React, { useState } from "react";
-import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
+import { DatePicker, Space } from "antd";
+import { useContext } from "react";
+import MyContext from "../../Context/context";
 
 function Header({ state }) {
   let navigate = useNavigate();
-
+  const [guests, setGuests] = useState("");
+  const { RangePicker } = DatePicker;
   function logoToHome() {
     navigate("/");
   }
 
-  // function Example() {
-  //   const [startDate, setStartDate] = useState(new Date());
+  const { context, setContext } = useContext(MyContext);
 
-  //   return (
-  //     <DatePicker
-  //       selected={startDate}
-  //       onChange={(date: Date) => setStartDate(date)}
-  //     />
-  //   );
-  // }
+  const handleChange = async (value) => {
+    let dates = await value;
+    console.log(dates);
+    return;
+    // // setDate(dates);
+    // setContext(dates);
+    // console.log(context);
+  };
+
+  function guestsTotal(e) {
+    setGuests(e.target.value);
+    console.log(guests);
+    setContext(guests);
+  }
 
   return (
     <div styleName="header__wrapper">
@@ -108,21 +116,22 @@ function Header({ state }) {
           <img src="./assets/icons/form-date.png" alt="" />
           <div styleName="form__date__card">
             <span>When</span>
-            <select
-              // onSelect={Example}
-              name="Date"
-              id=""
-              placeholder="Choose a Date"
-            >
-              <option>Choose a Date</option>
-            </select>
+            <Space direction="vertical" size={12}>
+              <RangePicker onChange={handleChange} />
+            </Space>
           </div>
         </div>
         <div styleName="form__guests">
           <img src="./assets/icons/form-guests.png" alt="" />
           <div styleName="form__guests__card">
             <span>Guests</span>
-            <input name="Guests" id="" placeholder=" number of guest"></input>
+            <input
+              onChange={guestsTotal}
+              value={guests}
+              name="Guests"
+              id=""
+              placeholder=" number of guest"
+            ></input>
           </div>
         </div>
         <div styleName="form__button">
