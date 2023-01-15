@@ -8,7 +8,7 @@ import MyContext from "../../Context/context";
 function UserPage() {
   //   const blah = useContext(MyContext);
   const { context } = useContext(MyContext);
-  console.log();
+  console.log(context);
   const { state } = useLocation();
   console.log(state);
   return (
@@ -16,7 +16,10 @@ function UserPage() {
       <Header state={state} />
       <div styleName="trips__user_page">
         <ul>
-          <li>1. {`Number of Guests(${context})`}</li>
+          <li>
+            1.
+            {` You ${context.guests} are going to ${context.destination}, your activity is ${context.activity}`}
+          </li>
           <li>2..</li>
           <li>3...</li>
         </ul>

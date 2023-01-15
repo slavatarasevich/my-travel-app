@@ -8,28 +8,51 @@ import MyContext from "../../Context/context";
 
 function Header({ state }) {
   let navigate = useNavigate();
+  const [destination, setDestination] = useState("");
+  const [activity, setActivity] = useState("");
   const [guests, setGuests] = useState("");
+  const { context, setContext } = useContext(MyContext);
   const { RangePicker } = DatePicker;
+
   function logoToHome() {
     navigate("/");
   }
-
-  const { context, setContext } = useContext(MyContext);
 
   const handleChange = async (value) => {
     let dates = await value;
     console.log(dates);
     return;
-    // // setDate(dates);
-    // setContext(dates);
-    // console.log(context);
   };
 
-  function guestsTotal(e) {
-    setGuests(e.target.value);
+  function handleDestination(event) {
+    setDestination(event.target.value);
+    console.log(destination);
+    return;
+  }
+
+  function handleActivity(event) {
+    setActivity(event.target.value);
+    console.log(activity);
+    return;
+  }
+
+  function handleGuestsNumber(event) {
+    setGuests(event.target.value);
     console.log(guests);
     setContext(guests);
   }
+
+  function handleOrderButton() {
+    const obj = {
+      destination,
+      activity,
+      guests,
+    };
+
+    setContext(obj);
+  }
+
+  //------------------------------------------------------------------------------------------------
 
   return (
     <div styleName="header__wrapper">
@@ -91,11 +114,19 @@ function Header({ state }) {
           <div styleName="form__location__card">
             <span>Location</span>
             <select
+              onChange={handleDestination}
+              value={destination}
               name="Location"
               id=""
               placeholder="Explore nearby destinations"
             >
               <option>Explore nearby destinations</option>
+              <option>Big Sur</option>
+              <option>Prescott</option>
+              <option>Fort Mayers</option>
+              <option>Tucson</option>
+              <option>St. Joseph</option>
+              <option>Madrid</option>
             </select>
           </div>
         </div>
@@ -103,7 +134,13 @@ function Header({ state }) {
           <img src="./assets/icons/form-activity.png" alt="" />
           <div styleName="form__activity__card">
             <span>Activity</span>
-            <select name="Activity" id="" placeholder="All Activities">
+            <select
+              onChange={handleActivity}
+              value={activity}
+              name="Activity"
+              id=""
+              placeholder="All Activities"
+            >
               <option>All Activities</option>
               <option>Sailing</option>
               <option>Climbing</option>
@@ -126,7 +163,7 @@ function Header({ state }) {
           <div styleName="form__guests__card">
             <span>Guests</span>
             <input
-              onChange={guestsTotal}
+              onChange={handleGuestsNumber}
               value={guests}
               name="Guests"
               id=""
@@ -134,7 +171,7 @@ function Header({ state }) {
             ></input>
           </div>
         </div>
-        <div styleName="form__button">
+        <div onClick={handleOrderButton} styleName="order__button">
           <img src="./assets/icons/form-search.png" alt="" />
         </div>
       </div>
