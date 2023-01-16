@@ -22,9 +22,15 @@ function UserPage() {
     console.log(data);
     return setTrips(data);
   }
-  console.log(trips);
+  // function durationSlice(date) {
+  //   const newDate = date[0].slice(0, 9);
+  //   return newDate;
+  // }
+  // console.log(trips[0].duration[0]);
+
   return (
     <div styleName="user-page__container">
+      {/* {trips ? trips[5].duration[0].slice(0, 10) : <h1>Loading trips...</h1>} */}
       <Header state={state} />
       <div styleName="trips__user_page">
         {trips ? (
@@ -32,8 +38,7 @@ function UserPage() {
             return (
               <li key={index}>
                 <p>
-                  {`${trip.id}. Your trip to ${trip.destination} for  ${trip.activity} `}
-                  .
+                  {`${trip.id}. Your trip to ${trip.destination} for ${trip.activity} set to: ${trip.duration} for ${trip.guests} people`}
                 </p>
               </li>
             );

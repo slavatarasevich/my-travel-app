@@ -49,22 +49,53 @@
       "user": "NIkita",
       "password": "rgrwgwer",
       "id": 10
+    },
+    {
+      "user": "Nikita",
+      "password": "nikita2013",
+      "id": 11
     }
   ],
   "trips": [
     {
-      "id": 1,
-      "destination": "Big Sur",
-      "activity": "Skiing",
-      "dates": "3 days",
-      "guests": "2"
-    },
-    {
-      "id": 2,
       "destination": "Prescott",
       "activity": "Sailing",
-      "dates": "5 days",
-      "guests": "3"
+      "duration": [
+        "2023-01-08T13:32:56.484Z",
+        "2023-01-12T13:32:56.484Z"
+      ],
+      "guests": "4",
+      "id": 6
+    },
+    {
+      "destination": "Madrid",
+      "activity": "Hiking",
+      "duration": [
+        "2023-01-01T14:18:31.224Z",
+        "2023-01-05T14:18:31.224Z"
+      ],
+      "guests": "1",
+      "id": 7
+    },
+    {
+      "destination": "Tucson",
+      "activity": "Climbing",
+      "duration": [
+        "2023-01-09T15:05:24.504Z",
+        "2023-01-27T15:05:24.504Z"
+      ],
+      "guests": "5",
+      "id": 8
+    },
+    {
+      "destination": "Big Sur",
+      "activity": "Hiking",
+      "duration": [
+        "2023-01-15T15:06:33.912Z",
+        "2023-01-27T15:06:33.912Z"
+      ],
+      "guests": "1",
+      "id": 9
     }
   ],
   "profile": {

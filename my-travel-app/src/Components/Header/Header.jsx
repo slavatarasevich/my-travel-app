@@ -5,12 +5,14 @@ import React, { useState } from "react";
 import { DatePicker, Space } from "antd";
 import { useContext } from "react";
 import MyContext from "../../Context/context";
+import PostServices from "../../Services/PostServices";
 
 function Header({ state }) {
   let navigate = useNavigate();
   const [destination, setDestination] = useState("");
   const [activity, setActivity] = useState("");
   const [guests, setGuests] = useState("");
+  const [duration, setDuration] = useState("");
   const { context, setContext } = useContext(MyContext);
   const { RangePicker } = DatePicker;
 
@@ -21,7 +23,8 @@ function Header({ state }) {
   const handleChange = async (value) => {
     let dates = await value;
     console.log(dates);
-    return;
+
+    return setDuration(dates);
   };
 
   function handleDestination(event) {
@@ -42,14 +45,21 @@ function Header({ state }) {
     setContext(guests);
   }
 
-  function handleOrderButton() {
-    const obj = {
+  async function handleOrderTripButton() {
+    const result = await PostServices.postTrip(
       destination,
       activity,
-      guests,
-    };
-
-    setContext(obj);
+      duration,
+      guests
+    );
+    if (result === 201) {
+      console.log("trip has been saved");
+      setDestination("");
+      setActivity("");
+      setDuration("");
+      setGuests("");
+      return;
+    }
   }
 
   //------------------------------------------------------------------------------------------------
@@ -171,7 +181,7 @@ function Header({ state }) {
             ></input>
           </div>
         </div>
-        <div onClick={handleOrderButton} styleName="order__button">
+        <div onClick={handleOrderTripButton} styleName="order__button">
           <img src="./assets/icons/form-search.png" alt="" />
         </div>
       </div>

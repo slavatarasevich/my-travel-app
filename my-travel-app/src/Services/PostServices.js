@@ -13,12 +13,12 @@ class PostServices {
     }
   }
 
-  static async postTrip(destination, activity, dates, guests) {
+  static async postTrip(destination, activity, duration, guests) {
     try {
       const result = await axios.post("http://localhost:3001/trips", {
         destination,
         activity,
-        dates,
+        duration,
         guests,
       });
       return result.status;
