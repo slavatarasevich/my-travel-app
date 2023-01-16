@@ -12,9 +12,20 @@ class PostServices {
       return error;
     }
   }
+
+  static async postTrip(destination, activity, dates, guests) {
+    try {
+      const result = await axios.post("http://localhost:3001/trips", {
+        destination,
+        activity,
+        dates,
+        guests,
+      });
+      return result.status;
+    } catch (error) {
+      return error;
+    }
+  }
 }
 
 export default PostServices;
-// setPosts([response.data, ...posts]);
-// setTitle('');
-// setBody('');

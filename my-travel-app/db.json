@@ -51,11 +51,20 @@
       "id": 10
     }
   ],
-  "comments": [
+  "trips": [
     {
       "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "destination": "Big Sur",
+      "activity": "Skiing",
+      "dates": "3 days",
+      "guests": "2"
+    },
+    {
+      "id": 2,
+      "destination": "Prescott",
+      "activity": "Sailing",
+      "dates": "5 days",
+      "guests": "3"
     }
   ],
   "profile": {

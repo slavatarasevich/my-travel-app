@@ -28,8 +28,15 @@
       color: #161414;
     }
     ul {
-      list-style: none;
       color: #161414;
+    }
+    li {
+      color: #161414;
+      list-style: none;
+      font-weight: 500;
+      p {
+        border-bottom: 1px dotted rgb(250, 134, 80);
+      }
     }
   }
 }
