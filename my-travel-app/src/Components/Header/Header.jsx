@@ -20,18 +20,14 @@ function Header({ state }) {
     navigate("/");
   }
 
-  const handleChange = async (value) => {
-    let dates = await value;
-    console.log(dates);
-
-    return setDuration(dates);
-  };
-
+  //choosing destination
   function handleDestination(event) {
     setDestination(event.target.value);
     console.log(destination);
     return;
   }
+
+  //choosing activity
 
   function handleActivity(event) {
     setActivity(event.target.value);
@@ -39,9 +35,19 @@ function Header({ state }) {
     return;
   }
 
+  //setting dates
+
+  const handleChange = async (value) => {
+    let dates = await value;
+    console.log(dates);
+    return setDuration(dates);
+  };
+
+  //setting # of guests
+
   function handleGuestsNumber(event) {
     setGuests(event.target.value);
-    console.log(guests);
+    console.log(typeof +guests); //TODO: how to create validation for user enters numbers not a string
     setContext(guests);
   }
 

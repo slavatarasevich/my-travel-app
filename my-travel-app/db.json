@@ -54,48 +54,33 @@
       "user": "Nikita",
       "password": "nikita2013",
       "id": 11
+    },
+    {
+      "user": "Egor",
+      "password": "Egor",
+      "id": 12
     }
   ],
   "trips": [
     {
-      "destination": "Prescott",
+      "destination": "Big Sur",
       "activity": "Sailing",
       "duration": [
-        "2023-01-08T13:32:56.484Z",
-        "2023-01-12T13:32:56.484Z"
+        "2023-01-01T19:29:43.191Z",
+        "2023-01-04T19:29:43.191Z"
       ],
-      "guests": "4",
-      "id": 6
+      "guests": "2",
+      "id": 1
     },
     {
-      "destination": "Madrid",
-      "activity": "Hiking",
-      "duration": [
-        "2023-01-01T14:18:31.224Z",
-        "2023-01-05T14:18:31.224Z"
-      ],
-      "guests": "1",
-      "id": 7
-    },
-    {
-      "destination": "Tucson",
+      "destination": "St. Joseph",
       "activity": "Climbing",
       "duration": [
-        "2023-01-09T15:05:24.504Z",
-        "2023-01-27T15:05:24.504Z"
+        "2023-01-30T19:34:55.896Z",
+        "2023-01-31T19:34:55.896Z"
       ],
-      "guests": "5",
-      "id": 8
-    },
-    {
-      "destination": "Big Sur",
-      "activity": "Hiking",
-      "duration": [
-        "2023-01-15T15:06:33.912Z",
-        "2023-01-27T15:06:33.912Z"
-      ],
-      "guests": "1",
-      "id": 9
+      "guests": "3",
+      "id": 2
     }
   ],
   "profile": {

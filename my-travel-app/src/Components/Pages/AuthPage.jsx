@@ -43,58 +43,65 @@ function AuthPage() {
     console.log(filteredArr);
     if (filteredArr.length > 0) {
       navigate("/user", { state: name });
+    } else {
+      setError(true);
+      setTimeout(() => {
+        setError(false);
+      }, 1000);
     }
   }
 
   return (
-    <div styleName="auth__page">
-      {error ? <h1>Enter your creds</h1> : <h1>Please Authorize</h1>}
+    <div styleName="auth__page__wrapper">
+      <div styleName="auth__page">
+        {error ? <h1>Enter your creds</h1> : <h1>Please Authorize</h1>}
 
-      <div styleName="form__div">
-        <input
-          onChange={handleInputName}
-          type="text"
-          styleName="form-input"
-          placeholder="."
-        />
-        <label htmlFor="" styleName="form-label">
-          Username
-        </label>
-      </div>
+        <div styleName="form__div">
+          <input
+            onChange={handleInputName}
+            type="text"
+            styleName="form-input"
+            placeholder="."
+          />
+          <label htmlFor="" styleName="form-label">
+            Username
+          </label>
+        </div>
 
-      <div styleName="form__div">
-        <input
-          onChange={handleInputPass}
-          type="password"
-          styleName="form-input"
-          placeholder="."
-        />
-        <label htmlFor="" styleName="form-label">
-          Password
-        </label>
-      </div>
+        <div styleName="form__div">
+          <input
+            onChange={handleInputPass}
+            type="password"
+            styleName="form-input"
+            placeholder="."
+          />
+          <label htmlFor="" styleName="form-label">
+            Password
+          </label>
+        </div>
 
-      <div styleName="log-reg__buttons">
-        <button styleName="auth-form__buttons" onClick={handleLogin}>
-          Log in
-        </button>
+        <div styleName="log-reg__buttons">
+          <button styleName="auth-form__buttons" onClick={handleLogin}>
+            Log in
+          </button>
+          <button
+            styleName="auth-form__buttons"
+            onClick={() => {
+              navigate("/reg");
+            }}
+          >
+            Register
+          </button>
+        </div>
         <button
-          styleName="auth-form__buttons"
+          styleName="auth-form__buttons__back"
           onClick={() => {
-            navigate("/reg");
+            navigate("/");
           }}
         >
-          Register
+          Back to Home
         </button>
       </div>
-      <button
-        styleName="auth-form__buttons__back"
-        onClick={() => {
-          navigate("/");
-        }}
-      >
-        Back to Home
-      </button>
     </div>
   );
 }

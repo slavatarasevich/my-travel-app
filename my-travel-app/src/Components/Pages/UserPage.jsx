@@ -38,7 +38,14 @@ function UserPage() {
             return (
               <li key={index}>
                 <p>
-                  {`${trip.id}. Your trip to ${trip.destination} for ${trip.activity} set to: ${trip.duration} for ${trip.guests} people`}
+                  {`${trip.id}. Your trip to ${trip.destination} for ${
+                    trip.activity
+                  } set from: ${trip.duration[0].slice(
+                    0,
+                    10
+                  )} to ${trip.duration[1].slice(0, 10)}  for ${
+                    trip.guests
+                  } people`}
                 </p>
               </li>
             );
