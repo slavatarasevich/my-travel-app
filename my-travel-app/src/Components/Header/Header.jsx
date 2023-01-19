@@ -48,7 +48,6 @@ function Header({ state }) {
   function handleGuestsNumber(event) {
     setGuests(event.target.value);
     console.log(typeof +guests); //TODO: how to create validation for user enters numbers not a string
-    setContext(guests);
   }
 
   async function handleOrderTripButton() {
@@ -114,7 +113,7 @@ function Header({ state }) {
           </div>
         )}
       </div>
-      {!state && (
+      {!state ? (
         <>
           <h1>Discover the most engaging places</h1>
           <div styleName="button">
@@ -122,7 +121,7 @@ function Header({ state }) {
             <span>Discover on 3D Globe</span>
           </div>
         </>
-      )}
+      ) : null}
 
       <div styleName="form">
         <div styleName="form__location">
@@ -191,20 +190,7 @@ function Header({ state }) {
           <img src="./assets/icons/form-search.png" alt="" />
         </div>
       </div>
-      {state && (
-        <span
-          style={{
-            backgroundColor: "rgba(0,0,0,.5)",
-            fontSize: "42px",
-            fontWeight: "400",
-            marginTop: "300px",
-            paddingLeft: "20px",
-            paddingRight: "20px",
-          }}
-        >
-          ...Your recent trips
-        </span>
-      )}
+      {state && <span styleName="recent__trips">...Your recent trips</span>}
     </div>
   );
 }

@@ -64,23 +64,23 @@
   "trips": [
     {
       "destination": "Big Sur",
-      "activity": "Sailing",
+      "activity": "Skiing",
       "duration": [
-        "2023-01-01T19:29:43.191Z",
-        "2023-01-04T19:29:43.191Z"
-      ],
-      "guests": "2",
-      "id": 1
-    },
-    {
-      "destination": "St. Joseph",
-      "activity": "Climbing",
-      "duration": [
-        "2023-01-30T19:34:55.896Z",
-        "2023-01-31T19:34:55.896Z"
+        "2023-01-01T10:11:19.109Z",
+        "2023-01-05T10:11:19.109Z"
       ],
       "guests": "3",
       "id": 2
+    },
+    {
+      "destination": "Fort Mayers",
+      "activity": "Hiking",
+      "duration": [
+        "2023-03-13T10:11:44.701Z",
+        "2023-03-15T10:11:44.701Z"
+      ],
+      "guests": "6",
+      "id": 3
     }
   ],
   "profile": {
