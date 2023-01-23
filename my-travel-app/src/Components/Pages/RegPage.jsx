@@ -6,6 +6,7 @@ import PostServices from "../../Services/PostServices";
 
 function RegPage() {
   const [name, setName] = useState("");
+  const [error, setError] = useState(false);
   const [password, setPassword] = useState("");
   const [regFlag, setRegFlag] = useState("");
   const navigate = useNavigate();
@@ -19,6 +20,14 @@ function RegPage() {
   };
 
   const handleRegister = async () => {
+    if (name === "" && password === "") {
+      setError(true);
+      setTimeout(() => {
+        setError(false);
+      }, 1000);
+      return;
+    }
+
     const result = await PostServices.postUser(name, password);
     if (result === 201) {
       console.log("done");
@@ -33,6 +42,7 @@ function RegPage() {
     <div styleName="reg-page__wrapper">
       <div styleName="reg-page__container">
         <h1>Register now </h1>
+        {error ? <h2>Enter your info</h2> : null}
         {regFlag ? (
           <h2>You've been registered</h2>
         ) : (

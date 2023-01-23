@@ -59,6 +59,26 @@
       "user": "Egor",
       "password": "Egor",
       "id": 12
+    },
+    {
+      "user": "vlad",
+      "password": "vlad",
+      "id": 13
+    },
+    {
+      "user": "",
+      "password": "",
+      "id": 14
+    },
+    {
+      "user": "",
+      "password": "",
+      "id": 15
+    },
+    {
+      "user": "bob",
+      "password": "bob111",
+      "id": 16
     }
   ],
   "trips": [
@@ -81,6 +101,16 @@
       ],
       "guests": "6",
       "id": 3
+    },
+    {
+      "destination": "St. Joseph",
+      "activity": "Sailing",
+      "duration": [
+        "2023-03-15T15:17:26.211Z",
+        "2023-03-17T15:17:26.211Z"
+      ],
+      "guests": "12",
+      "id": 4
     }
   ],
   "profile": {
